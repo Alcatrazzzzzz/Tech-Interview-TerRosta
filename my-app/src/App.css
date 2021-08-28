@@ -1,0 +1,278 @@
+header {
+  background-color: #4f27bf;
+  display: flex;
+  font-weight: bold;
+  color: white;
+  padding: 16px 32px;
+  font-size: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.header-logo,
+.header-user {
+  display: flex;
+  cursor: pointer;
+}
+
+.header-logo p,
+.header-user p {
+  margin-left: 16px;
+}
+
+.header-user {
+  margin-left: auto;
+}
+
+main {
+  padding: 0 32px;
+  display: flex;
+}
+nav {
+  box-shadow: 10px 0 5px -10px rgba(2, 0, 96, 0.25);
+  width: 27%;
+  position: fixed;
+  top: 97px;
+  bottom: 10px;
+  overflow-y: scroll;
+}
+.news::-webkit-scrollbar,
+nav::-webkit-scrollbar {
+  width: 6px;
+}
+.news::-webkit-scrollbar-thumb,
+nav::-webkit-scrollbar-thumb {
+  background-color: rgb(243, 243, 243);
+  border-radius: 20px;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 25px 0 32px 0;
+}
+
+.nav-link:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.nav-link {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-link-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link p {
+  margin: 0 0 0 12px;
+}
+
+.nav-link-hideshow {
+  margin-left: auto;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.link-active-block {
+  width: 4px;
+  height: 32px;
+  background-color: #4f27bf;
+  margin-left: auto;
+}
+.content {
+  width: 73%;
+  right: 0;
+  top: 100px;
+  bottom: 10px;
+  margin-left: auto;
+}
+.news {
+  padding-left: 52px;
+  padding-right: 32px;
+}
+
+.news h2 {
+  font-size: 26px;
+  margin-top: 24px;
+}
+.news p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.news::-webkit-scrollbar-thumb {
+  background-color: #4f27bf;
+}
+
+.adress {
+  padding: 32px 0 32px 52px;
+  display: flex;
+  flex-direction: column;
+}
+
+.adress h2 {
+  margin: 0;
+  font-size: 26px;
+}
+.adress p {
+  font-size: 20px;
+}
+
+.adress p {
+  font-size: 20px;
+}
+.adress-error-msg {
+  margin: 20px 0 0 0;
+  color: rgb(240, 98, 98);
+  font-size: 20px;
+}
+.adress-search {
+  display: flex;
+}
+.adress-search-input {
+  padding: 24px;
+  width: 100%;
+  border-width: 3px;
+  border-color: rgba(0, 0, 0, 0.226);
+  border-radius: 10px;
+  font-size: 20px;
+  transition: 1s;
+}
+.adress-search-input:focus {
+  outline: none;
+  border-color: #4f27bf;
+  transition: 1s;
+}
+.adress-search-input::placeholder {
+  font-size: 20px;
+}
+
+.adress-search-input-error {
+  border-color: rgb(240, 98, 98);
+}
+.adress-search-input-error:focus {
+  border-color: rgb(240, 98, 98);
+}
+.adress-spinner {
+  margin: 100px auto;
+}
+
+.adress-search button {
+  font-size: 26px;
+  margin-left: 24px;
+  background-color: #4f27bf;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+}
+.adress-search button span {
+  margin-left: 16px;
+  font-weight: 700;
+}
+
+.adress-list {
+  margin-top: 32px;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0px 2px 8px rgba(2, 0, 97, 0.25);
+}
+.adress-list h3 {
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0;
+}
+
+.adress-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.adress-list li {
+  font-size: 20px;
+  padding: 16px 0;
+  border-top: 1px solid #d7d7d7;
+}
+.mobile-nav {
+  display: none;
+}
+
+.header-burger {
+  display: none;
+  width: 48px;
+  margin-left: auto;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  .adress-search {
+    flex-direction: column;
+  }
+  .adress-search button {
+    margin: 24px 0 0 0;
+    width: 100%;
+    padding: 20px;
+  }
+  .adress-search-input {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+  }
+  .adress {
+    padding: 32px 0;
+  }
+  .news {
+    padding: 0;
+  }
+  nav {
+    display: none;
+  }
+  .header-user {
+    display: none;
+  }
+  .header-logo p {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    position: fixed;
+    width: 100%;
+    font-size: 20px;
+    background-color: white;
+    left: 0;
+    top: 78px;
+    bottom: -2px;
+    overflow-y: scroll;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0 32px;
+    color: black;
+  }
+  .link-active-block {
+    display: none;
+  }
+  .header-burger {
+    display: inline;
+  }
+  .header-user-mobile {
+    color: black;
+    display: flex;
+    margin: 16px 24px;
+  }
+  .header-user-mobile p {
+    margin-left: 10px;
+  }
+}
